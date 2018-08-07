@@ -2,15 +2,14 @@
 
 ## git配置
 
-- 
-初次运行git时对git的配置
++ 初次运行git时对git的配置
 
     git config --global user.name "<your github name>"
-    
     git config --global user.email <your github email>
 
-* clone远程仓库的项目到本地  *
-git clone https://github.com/username/example.github.io.git
++ clone远程仓库的项目到本地  
+
+	git clone https://github.com/username/example.github.io.git
 
 ## 基本命令
 
@@ -45,6 +44,24 @@ git clone https://github.com/username/example.github.io.git
     git rm your/file/path
     git rm folder/path -r // 删除该目录下的所有文件(包括目录)
 
+## 使用代理
+
+#### 使用sock5
+
+	git config --global http.proxy "sock5://127.0.0.1:1080"
+	git config --global https.proxy "sock5://127.0.0.1:1080"
+
+#### 使用http
+
+	git config --global http.proxy "http://127.0.0.1:1080"
+	git config --global https.proxy “https://127.0.0.1:1080"
+
+#### 取消代理
+
+	git config --global --unset http.proxy 
+	git config --global --unset https.proxy 
+	
+	
 ## 关联本地工程到github仓库
 
     git init  //地仓库初始化，执行完后会在工程目录下生成一个.git的隐藏目录
@@ -65,11 +82,10 @@ git clone https://github.com/username/example.github.io.git
 
 比如某天想搞些新事情了,可以创建一个名为debug的分支在上面调试修改,这样如果失败了也不会影响到origin branch,而调试成功了也可以直接合并: 
 
-+ 建立一个新分支:  
-`
-
+	+ 建立一个新分支:  
+	```
     git checkout  -b debug 
-`
+	```
 
     + 如果最后没有调试成功,可以选择留着debug分支,也许以后有灵感了再来弄(代码注释一定要做好),但是如果就不想弄了也可以选择删除分支: 
     ```
@@ -82,7 +98,7 @@ git clone https://github.com/username/example.github.io.git
     ``` 
     
 
-**注意:** 合并发生冲突是畅游的事情,因此一旦出现类似下面的提示,就得自己手动解决按冲突了
+**注意:** 合并发生冲突是常有的事情,因此一旦出现类似下面的提示,就得自己手动解决按冲突了
 
     CONFLICT (content): Merge conflict in...
     Automatic merge failed; fix conflicts and then commit the result.
