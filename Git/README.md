@@ -2,14 +2,14 @@
 
 ## git配置
 
-+ 初次运行git时对git的配置
+* 初次运行git时对git的配置 *
 
     git config --global user.name "<your github name>"
     git config --global user.email <your github email>
 
-+ clone远程仓库的项目到本地  
+* clone远程仓库的项目到本地 *
 
-	git clone https://github.com/username/example.github.io.git
+    git clone https://github.com/username/example.github.io.git
 
 ## 基本命令
 
