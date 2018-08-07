@@ -2,12 +2,12 @@
 
 ## git配置
 
-* 初次运行git时对git的配置 *
+* 初次运行git时对git的配置 
 
     `git config --global user.name "<your github name>"`
     `git config --global user.email <your github email>`
 
-* clone远程仓库的项目到本地 *
+* clone远程仓库的项目到本地 
 
     `git clone https://github.com/username/example.github.io.git`
 
@@ -63,23 +63,23 @@
 	
 ## 保存用户名密码（以便push时不用多次输入）
 
-####使用http/https协议
+#### 使用http/https协议
 
-*设置记住密码（默认15分钟）：*
+* 设置记住密码（默认15分钟）：
 
 	git config --global credential.helper cache
 	
-*如果想自己设置时间，可以这样做：*
+* 如果想自己设置时间，可以这样做：
 
 	git config credential.helper 'cache --timeout=3600'
 
 这样就设置一个小时之后失效
 
-*长期存储密码：*
+* 长期存储密码：
 
 	git config --global credential.helper store
 
-*增加远程地址的时候带上密码也是可以的。(推荐)*
+* 增加远程地址的时候带上密码也是可以的。(推荐)
 
 	http://yourname:password@git.oschina.net/name/project.git
 	
@@ -89,15 +89,15 @@
 
 如果你正在使用ssh而且想体验https带来的高速，那么你可以这样做： 
 
-*切换到项目目录下 ：*
+* 切换到项目目录下 ：
 
 	cd projectfile/
 	
-*移除远程ssh方式的仓库地址*
+* 移除远程ssh方式的仓库地址
 
 	git remote rm origin
 	
-*增加https远程仓库地址*
+* 增加https远程仓库地址
 
 	git remote add origin http://yourname:password@git.oschina.net/name/project.git
 	
