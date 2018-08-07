@@ -4,12 +4,12 @@
 
 * 初次运行git时对git的配置 
 
-    `git config --global user.name "<your github name>"`
-    `git config --global user.email <your github email>`
+` git config --global user.name "<your github name>"`
+` git config --global user.email <your github email>`
 
 * clone远程仓库的项目到本地 
 
-    `git clone https://github.com/username/example.github.io.git`
+` git clone https://github.com/username/example.github.io.git`
 
 ## 基本命令
 
@@ -67,21 +67,21 @@
 
 * 设置记住密码（默认15分钟）：
 
-	git config --global credential.helper cache
+` git config --global credential.helper cache `
 	
 * 如果想自己设置时间，可以这样做：
 
-	git config credential.helper 'cache --timeout=3600'
+` git config credential.helper 'cache --timeout=3600' `
 
 这样就设置一个小时之后失效
 
 * 长期存储密码：
 
-	git config --global credential.helper store
+` git config --global credential.helper store `
 
 * 增加远程地址的时候带上密码也是可以的。(推荐)
 
-	http://yourname:password@git.oschina.net/name/project.git
+` http://yourname:password@git.oschina.net/name/project.git `
 	
 补充：使用客户端也可以存储密码的。
 
@@ -91,16 +91,16 @@
 
 * 切换到项目目录下 ：
 
-	cd projectfile/
+` cd projectfile/ `
 	
-* 移除远程ssh方式的仓库地址
+* 移除远程ssh方式的仓库地址 
 
-	git remote rm origin
+` git remote rm origin `
 	
-* 增加https远程仓库地址
+* 增加https远程仓库地址 
 
-	git remote add origin http://yourname:password@git.oschina.net/name/project.git
-	
+` git remote add origin http://yourname:password@git.oschina.net/name/project.git `
+
 ## 关联本地工程到github仓库
 
     git init  //地仓库初始化，执行完后会在工程目录下生成一个.git的隐藏目录
